@@ -1,0 +1,20 @@
+.custominput {
+  /* width: 379px; */
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.custominput > label {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.custominput > input {
+  height: 40px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  outline: none
+}

@@ -1,0 +1,28 @@
+.customModal {
+  /* height: 641px; */
+  width: 404px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.customModal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customModal__header > p {
+  font-weight: 600;
+  font-size: 21px;
+}
+
+hr {
+  margin: 20px 0;
+  background-color: rgba(0, 0, 0, 1);
+}

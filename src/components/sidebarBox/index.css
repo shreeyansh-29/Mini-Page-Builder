@@ -1,0 +1,17 @@
+.sidebarbox {
+    width: 278px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.sidebarbox > .sidebarbox__text { 
+    width: 235px;
+    color: #000;
+    font-weight: 300;
+}
