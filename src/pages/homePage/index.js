@@ -43,8 +43,6 @@ const HomePage = () => {
   };
 
   const handleDeleteElement = () => {
-    // Implement your delete logic here
-    // You can use React state to update the elements array
     setElements(elements.filter((el) => el !== selectedElement));
     setSelectedElement(null);
   };
@@ -70,6 +68,7 @@ const HomePage = () => {
         >
           {elements.map((element, index) => (
             <div
+              tabIndex={1}
               key={index}
               className={`element ${
                 selectedElement === element ? "selected" : ""
@@ -77,6 +76,10 @@ const HomePage = () => {
               style={{ left: element.x, top: element.y }}
               onClick={() => handleSelectElement(element)}
               onDoubleClick={() => openModal(element)}
+              onKeyDown={(e) => {
+                if(e.code === 'Enter') openModal(element);
+                if(e.code === "Delete") handleDeleteElement(element);
+              }}
             >
               {element.type}
             </div>
@@ -98,7 +101,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      {showModal && <CustomModal element={newElement} closeModal={openModal} />}
+      {showModal && <CustomModal element={elements[elements.length-1]} closeModal={openModal} />}
     </div>
   );
 };

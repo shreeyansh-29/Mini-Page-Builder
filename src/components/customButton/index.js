@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.css";
 
-const CustomButton = ({ title, onClick }) => {
+const CustomButton = ({ title, onClick, type }) => {
   return (
-    <div className="custombutton" onClick={onClick}>
+    <button type={type} className="custombutton" onClick={onClick}>
       <p>{title}</p>
-    </div>
+    </button>
   );
 };
 

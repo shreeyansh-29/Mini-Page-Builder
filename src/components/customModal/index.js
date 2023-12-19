@@ -6,9 +6,9 @@ import CustomButton from "components/customButton";
 
 const CustomModal = ({ closeModal, element }) => {
 
-  console.log(element);
   const handleSubmit = (e) => {
     e.preventDefault();
+    closeModal()
   };
 
   return (
@@ -19,12 +19,12 @@ const CustomModal = ({ closeModal, element }) => {
       </div>
       <hr />
       <form onSubmit={(e) => handleSubmit(e)}>
-        <CustomInput label="Text" />
+        <CustomInput label="Text" value={`This is a ${element.type}`} />
         <CustomInput label="X" value={element.x} />
         <CustomInput label="Y" value={element.y}  />
         <CustomInput label="Font Size" />
         <CustomInput label="Font Weight" />
-        <CustomButton title="Save Changes" />
+        <CustomButton title="Save Changes" type='submit' />
       </form>
     </div>
   );
