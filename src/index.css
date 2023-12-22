@@ -1,10 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-:root { 
-  --bg-color: #2d2d2d
+:root {
+  --bg-color: #2d2d2d;
+  --button-color: rgba(0, 68, 193, 1);
+  --white-color: #fff;
+  --black-color: rgba(0, 0, 0, 1);
+  --selected-color: #d95409;
+  --homelayout-color: #f3f3f3
 }
 
 ::-webkit-scrollbar {

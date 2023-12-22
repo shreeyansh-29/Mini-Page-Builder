@@ -1,0 +1,35 @@
+.mainlayout {
+  position: relative;
+  flex-grow: 1;
+}
+
+.mainlayout label {
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.mainlayout input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.mainlayout button {
+  padding: 10px;
+  background-color: var(--button-color);
+  color: var(--white-color);
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 2px;
+}
+
+.element {
+  position: absolute;
+  cursor: pointer;
+}
+
+.element.selected {
+  border: 2px solid var(--selected-color);
+}

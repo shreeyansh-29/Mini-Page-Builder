@@ -1,8 +1,7 @@
 .customModal {
-  /* height: 641px; */
   width: 404px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--white-color);
   padding: 20px;
   position: absolute;
   left: 50%;
@@ -24,5 +23,18 @@
 
 hr {
   margin: 20px 0;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: var(--black-color);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .customModal {
+    width: 300px;
+    transition: 0.4s all ease-in;
+  }
 }

@@ -1,12 +1,16 @@
 .custombutton {
-    width: 140px;
-    /* height: 40px; */
-    text-align: center;
-    background-color: rgba(0, 68, 193, 1);
-    padding: 12px 8px;
-    border-radius: 2px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    cursor: default;
+  width: 140px;
+  text-align: center;
+  background-color: var(--button-color);
+  padding: 12px 8px;
+  border-radius: 2px;
+  cursor: default;
+  outline: none;
+  border: none;
+}
+
+.custombutton > p {
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 400;
 }

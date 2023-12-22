@@ -1,0 +1,29 @@
+.homepage {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: var(--homelayout-color);
+}
+
+.homepage__wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage__wrapper > .homepage__mobileIcon {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .homepage__wrapper > .homepage__mobileIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
