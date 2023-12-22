@@ -32,10 +32,11 @@ const HomeLayout = ({handleToggle, isOpen}) => {
     localStorage.setItem("elements", JSON.stringify(elements));
   }, [elements]);
 
-  /** 
-    * @returns
-    * handleDrop() called when element is dropped or dragged afterwards to save element details
-  */
+  /**
+   * handleDrop()
+   * called when element is dropped or dragged afterwards to save element details
+   * @returns void
+   */
 
   const handleDrop = (e) => {
     e.preventDefault();
@@ -80,6 +81,11 @@ const HomeLayout = ({handleToggle, isOpen}) => {
     }
   };
 
+  /**
+   * handleDrag()
+   * called when element is dragged after getting placed to set the new co-ordinates
+   * @returns void
+   */
 
   const handleDrag = (e) => {
     if (isDragging) {
@@ -87,17 +93,37 @@ const HomeLayout = ({handleToggle, isOpen}) => {
     }
   };
 
+  /**
+   * handleDragStart()
+   * called when element is initially dragged from sidebar
+   * @returns void
+   */
+
   const handleDragStart = (e, type) => {
     e.dataTransfer.setData("type", type);
   };
 
   /**
-   * @returns
-   * clearElementValue() called to clear the state
+   * clearElementValue()
+   * called to clear the state
+   * @returns void
    */
 
   const clearElementValue = () => setNewElementValue(initialState);
+
+  /**
+   * saveElementValue()
+   * called to update the state of newly added element
+   * @returns void
+   */
+
   const saveElementValue = (element) => setNewElementValue(element);
+
+  /**
+   * saveElement()
+   * called to save the element to element collections
+   * @returns void
+   */
 
   const saveElement = (element) => {
     let temp = [...elements];
@@ -106,23 +132,42 @@ const HomeLayout = ({handleToggle, isOpen}) => {
     setElements([...temp, element]);
   };
 
+  /**
+   * closeModal()
+   * called to close the modal after saving element details
+   * @returns void
+   */
+
   const closeModal = () => {
     setShowModal(false);
   };
 
+  /**
+   * handleSelectElement()
+   * called to set selectedElement state
+   * @returns void
+   */
+
   const handleSelectElement = (element) => {
     setSelectedElement(element);
   };
+
+  /**
+   * handleDeleteElement()
+   * called to remove element from collection of elements
+   * @returns void
+   */
 
   const handleDeleteElement = () => {
     setElements(elements.filter((el) => el !== selectedElement));
     setSelectedElement(null);
   };
 
-   /**
-   * @returns
-   * handleExport() called when export the configuration
-  */
+  /**
+   * handleExport()
+   * called when export the configuration
+   * @returns void
+   */
 
   const handleExport = () => {
     if (elements.length !== 0) {
@@ -144,10 +189,11 @@ const HomeLayout = ({handleToggle, isOpen}) => {
     }
   };
 
-   /**
-   * @returns
-   * handleImport() called when json file is imported
-  */
+  /**
+   * handleImport()
+   * called when json file is imported
+   * @returns void
+   */
 
   const handleImport = (event) => {
     const fileInput = event.target;
@@ -170,9 +216,10 @@ const HomeLayout = ({handleToggle, isOpen}) => {
   };
 
   /**
-   * @returns
-   * handleKeyDown() called when element is selected and keypress action is done
-  */
+   * handleKeyDown()
+   * called when element is selected and keypress action is done
+   * @returns void
+   */
 
   const handleKeyDown = (e, element) => {
     if (e.code === "Enter") {
@@ -188,8 +235,9 @@ const HomeLayout = ({handleToggle, isOpen}) => {
   };
 
   /**
-   * @returns
-   * handleElementDrag() called when element is started dragging
+   * handleElementDrag()
+   * called when element is started dragging
+   * @returns void
    */
 
   const handleElementDrag = (e, element) => {
@@ -199,9 +247,9 @@ const HomeLayout = ({handleToggle, isOpen}) => {
   };
 
   /**
-   *
-   * @returns
-   * handleSetDragging() sets dragging state to be false
+   * handleSetDragging()
+   * sets dragging state to be false once element is stopped dragging
+   * @returns void
    */
   const handleSetDragging = () => setIsDragging(false);
 

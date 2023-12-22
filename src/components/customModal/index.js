@@ -11,6 +11,12 @@ const CustomModal = ({
   clearElementValue,
   saveElementValue,
 }) => {
+  /**
+   * handleSubmit()
+   * called to save the element details
+   * @returns void
+   */
+
   const handleSubmit = (e) => {
     e.preventDefault();
     closeModal();
@@ -18,10 +24,22 @@ const CustomModal = ({
     clearElementValue();
   };
 
+  /**
+   * handleClick()
+   * called to close the modal and clear state of element
+   * @returns void
+   */
+
   const handleClick = () => {
     closeModal();
     clearElementValue();
   };
+
+  /**
+   * handleChange()
+   * called when user changes co-ordinates manually
+   * @returns void
+   */
 
   const handleChange = (e) => {
     const {name, value} = e.target;
